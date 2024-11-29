@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CheckCircle, RadioButtonUnchecked, Edit, Delete } from '@mui/icons-material';
+import { CheckCircle, RadioButtonUnchecked, Edit, DeleteForever, Save} from '@mui/icons-material';
 
 const ToDoItem = ({ task, toggleTaskStatus, deleteTask, updateTask }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -55,21 +55,21 @@ const ToDoItem = ({ task, toggleTaskStatus, deleteTask, updateTask }) => {
             onClick={handleUpdate}
             className="bg-green-500 hover:bg-green-600 text-white px-2 py-1 rounded-md"
           >
-            Speichern
+            <Save></Save>
           </button>
         ) : (
           <button
             onClick={() => setIsEditing(true)}
             className="bg-yellow-400 hover:bg-yellow-500 text-white px-2 py-1 rounded-md"
           >
-            <Edit fontSize="small" /> Bearbeiten
+            <Edit></Edit>
           </button>
         )}
         <button
           onClick={() => deleteTask(task.id)}
           className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md"
         >
-          <Delete fontSize="small" /> Löschen
+          <DeleteForever></DeleteForever>
         </button>
       </div>
     </div>
