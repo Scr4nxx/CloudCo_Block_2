@@ -30,9 +30,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  width: 100%;
-  min-width: 320px;
+  min-width: 100vh;
   min-height: 100vh;
 }
 

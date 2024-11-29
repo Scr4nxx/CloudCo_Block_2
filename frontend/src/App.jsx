@@ -48,7 +48,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-blue-200 flex items-center justify-center">
-      <div className="bg-white shadow-2xl rounded-lg p-6 w-full max-w-2xl">
+      <div className="bg-white shadow-2xl rounded-lg p-8 w-full max-w-4xl">
         <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">
           To-Do App
         </h1>
@@ -60,3 +60,9 @@ const App = () => {
 };
 
 export default App;
+
+
+npm install axios
+npm install @mui/icons-material
+npm install tailwindcss postcss autoprefixer
+npx tailwindcss init
