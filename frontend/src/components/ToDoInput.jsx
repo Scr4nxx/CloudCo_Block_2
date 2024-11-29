@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AddIcon from '@mui/icons-material/Add';
 
 const ToDoInput = ({ addTask }) => {
     const [task, setTask] = useState('');
@@ -24,7 +25,7 @@ const ToDoInput = ({ addTask }) => {
                         type="submit"
                         className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md text-lg"
                 >
-                        Hinzufügen
+                    <AddIcon></AddIcon>
                 </button>
         </form>
     );
