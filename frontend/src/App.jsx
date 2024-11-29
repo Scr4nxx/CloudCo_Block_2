@@ -60,9 +60,3 @@ const App = () => {
 };
 
 export default App;
-
-
-npm install axios
-npm install @mui/icons-material
-npm install tailwindcss postcss autoprefixer
-npx tailwindcss init
