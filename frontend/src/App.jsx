@@ -63,8 +63,8 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-blue-200 flex items-center justify-center">
-      <div className="bg-white shadow-2xl rounded-lg p-8 w-full max-w-4xl">
+    <div className="min-h-screen bg-dark_blue flex items-center justify-center">
+        <div className="bg-dark_light_blue shadow-2xl rounded-lg p-8 w-full max-w-4xl">
         <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">
           To-Do App
         </h1>
