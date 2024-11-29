@@ -75,6 +75,7 @@ const App = () => {
             tasks={openTasks}
             toggleTaskStatus={toggleTaskStatus}
             deleteTask={deleteTask}
+            updateTask={updateTask}
           />
 
           <h2 className="text-xl font-bold mt-8 mb-4">Erledigte Aufgaben</h2>
@@ -82,6 +83,7 @@ const App = () => {
             tasks={completedTasks}
             toggleTaskStatus={toggleTaskStatus}
             deleteTask={deleteTask}
+            updateTask={updateTask}
           />
         </div>
       </div>

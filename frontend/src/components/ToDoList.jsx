@@ -1,6 +1,7 @@
+import React from 'react';
 import ToDoItem from './ToDoItem';
 
-const ToDoList = ({ tasks, toggleTaskStatus, deleteTask }) => {
+const ToDoList = ({ tasks, toggleTaskStatus, deleteTask, updateTask }) => {
   return (
     <div>
       {tasks.map((task) => (
@@ -9,6 +10,7 @@ const ToDoList = ({ tasks, toggleTaskStatus, deleteTask }) => {
           task={task}
           toggleTaskStatus={toggleTaskStatus}
           deleteTask={deleteTask}
+          updateTask={updateTask}
         />
       ))}
     </div>
