@@ -3,7 +3,7 @@ import ToDoItem from './ToDoItem';
 
 const ToDoList = ({ tasks, updateTask, deleteTask }) => {
   return (
-    <div className="bg-gray-100 border border-gray-200 rounded-md p-4 mt-4 shadow-inner">
+    <div className="bg-gray-100 border border-gray-200 rounded-md p-4 mt-14 shadow-inner">
         {tasks.map((task) => (
             <ToDoItem
             key={task.id}

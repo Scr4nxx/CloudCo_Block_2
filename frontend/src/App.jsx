@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ToDoInput from './components/ToDoInput';
 import ToDoList from './components/ToDoList';
+import './index.css';
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -56,13 +57,8 @@ const App = () => {
         <ToDoList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} />
       </div>
     </div>
+    
   );
 };
 
 export default App;
-
-
-npm install axios
-npm install @mui/icons-material
-npm install tailwindcss postcss autoprefixer
-npx tailwindcss init
