@@ -14,19 +14,19 @@ const ToDoInput = ({ addTask }) => {
 
     return (
         <form onSubmit={handleSubmit} className="mb-8 flex items-center space-x-4 mb-16">
-                <input
-                        type="text"
-                        className="flex-grow border border-gray-300 rounded-md p-3 focus:outline-none focus:ring focus:ring-blue-300 text-lg"
-                        placeholder="Neue Aufgabe hinzufügen..."
-                        value={task}
-                        onChange={(e) => setTask(e.target.value)}
-                />
-                <button
-                        type="submit"
-                        className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md text-lg"
-                >
-                    <AddIcon></AddIcon>
-                </button>
+            <input
+                type="text"
+                className="flex-grow rounded-md p-3 focus:outline-none focus:ring focus:ring-[#F7B176] text-lg bg-[#404668] text-[#ffffff]"
+                placeholder="Neue Aufgabe hinzufügen..."
+                value={task}
+                onChange={(e) => setTask(e.target.value)}
+            />
+            <button
+                type="submit"
+                className="bg-[#404668] hover:bg-[#F7B176] text-white hover:text-[#121F2F] px-6 py-3 rounded-md text-lg"
+            >
+                <AddIcon></AddIcon>
+            </button>
         </form>
     );
 };

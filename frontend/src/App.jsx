@@ -65,12 +65,12 @@ const App = () => {
   return (
     <div className="min-h-screen bg-dark_blue flex items-center justify-center">
         <div className="bg-dark_light_blue shadow-2xl rounded-lg p-8 w-full max-w-4xl">
-        <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">
+        <h1 className="text-5xl font-bold text-center text-[#F7B176] mb-12">
           To-Do App
         </h1>
         <ToDoInput addTask={addTask} />
         <div>
-          <h2 className="text-xl font-bold mb-4">Offene Aufgaben</h2>
+          <h2 className="text-xl font-bold mb-4 text-[#F7B176]">Offene Aufgaben</h2>
           <ToDoList
             tasks={openTasks}
             toggleTaskStatus={toggleTaskStatus}
@@ -78,7 +78,7 @@ const App = () => {
             updateTask={updateTask}
           />
 
-          <h2 className="text-xl font-bold mt-8 mb-4">Erledigte Aufgaben</h2>
+          <h2 className="text-xl font-bold mt-8 mb-4 text-[#F7B176]">Erledigte Aufgaben</h2>
           <ToDoList
             tasks={completedTasks}
             toggleTaskStatus={toggleTaskStatus}

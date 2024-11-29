@@ -15,12 +15,12 @@ const ToDoItem = ({ task, toggleTaskStatus, deleteTask, updateTask }) => {
   };
 
   return (
-    <div className="flex items-center justify-between bg-gray-50 p-4 rounded-md shadow-sm mb-2">
+    <div className="flex items-center justify-between bg-gray-50 bg-[#404668] text-[#ffffff] p-4 rounded-md shadow-sm mb-2">
       <div className="flex items-center">
         {/* Status-Icon für Aufgabenstatus */}
         <button
           onClick={() => toggleTaskStatus(task.id)}
-          className="mr-4 text-blue-500"
+          className="mr-4 text-white hover:text-[#F7B176]"
         >
           {task.completed ? (
             <CheckCircle fontSize="large" />
@@ -33,7 +33,7 @@ const ToDoItem = ({ task, toggleTaskStatus, deleteTask, updateTask }) => {
         {isEditing ? (
           <input
             type="text"
-            className="flex-grow border border-gray-300 rounded-md p-2 mr-4"
+            className="flex-grow focus:ring focus:ring-[#F7B176] border border-[#F7B176] text-lg bg-[#404668] text-[#ffffff] rounded-md p-2 mr-4"
             value={updatedTaskName}
             onChange={(e) => setUpdatedTaskName(e.target.value)}
           />
@@ -53,21 +53,21 @@ const ToDoItem = ({ task, toggleTaskStatus, deleteTask, updateTask }) => {
         {isEditing ? (
           <button
             onClick={handleUpdate}
-            className="bg-green-500 hover:bg-green-600 text-white px-2 py-1 rounded-md"
+            className="bg-[#404668] hover:bg-[#F7B176] text-white hover:text-[#121F2F] px-2 py-1 rounded-md"
           >
             <Save></Save>
           </button>
         ) : (
           <button
             onClick={() => setIsEditing(true)}
-            className="bg-yellow-400 hover:bg-yellow-500 text-white px-2 py-1 rounded-md"
+            className="bg-[#404668] hover:bg-[#F7B176] text-white hover:text-[#121F2F] px-2 py-1 rounded-md"
           >
             <Edit></Edit>
           </button>
         )}
         <button
           onClick={() => deleteTask(task.id)}
-          className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md"
+          className="bg-[#404668] hover:bg-[#F7B176] text-white hover:text-[#121F2F] px-2 py-1 rounded-md"
         >
           <DeleteForever></DeleteForever>
         </button>
