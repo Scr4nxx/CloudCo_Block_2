@@ -10,35 +10,37 @@ const ToDoItem = ({ task, updateTask, deleteTask }) => {
   };
 
   return (
-    <div className="flex items-center justify-between border p-2 mb-2">
-      {isEditing ? (
-        <input
-          type="text"
-          className="border p-1"
-          value={updatedTask}
-          onChange={(e) => setUpdatedTask(e.target.value)}
-        />
-      ) : (
-        <span
-          style={{ textDecoration: task.completed ? 'line-through' : 'none' }}
-        >
-          {task.name}
-        </span>
-      )}
-      <div>
-        <button
-          onClick={() => setIsEditing(!isEditing)}
-          className="bg-yellow-500 text-white px-2 py-1 mr-2"
-        >
-          {isEditing ? 'Speichern' : 'Bearbeiten'}
-        </button>
-        <button
-          onClick={() => deleteTask(task.id)}
-          className="bg-red-500 text-white px-2 py-1"
-        >
-          Löschen
-        </button>
-      </div>
+    <div className="flex items-center justify-between bg-gray-50 p-4 rounded-md shadow-sm mb-2">
+        {isEditing ? (
+            <input
+            type="text"
+            className="flex-grow border border-gray-300 rounded-md p-2 mr-4"
+            value={updatedTask}
+            onChange={(e) => setUpdatedTask(e.target.value)}
+            />
+        ) : (
+            <span
+            className={`flex-grow ${
+                task.completed ? 'line-through text-gray-500' : ''
+            }`}
+            >
+            {task.name}
+            </span>
+        )}
+        <div className="flex space-x-2">
+            <button
+            onClick={() => setIsEditing(!isEditing)}
+            className="bg-yellow-400 hover:bg-yellow-500 text-white px-2 py-1 rounded-md"
+            >
+            {isEditing ? 'Speichern' : 'Bearbeiten'}
+            </button>
+            <button
+            onClick={() => deleteTask(task.id)}
+            className="bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-md"
+            >
+            Löschen
+            </button>
+        </div>
     </div>
   );
 };

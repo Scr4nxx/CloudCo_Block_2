@@ -47,10 +47,14 @@ const App = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">To-Do App</h1>
-      <ToDoInput addTask={addTask} />
-      <ToDoList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} />
+    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-blue-200 flex items-center justify-center">
+      <div className="bg-white shadow-2xl rounded-lg p-6 w-full max-w-2xl">
+        <h1 className="text-3xl font-bold text-center text-blue-600 mb-6">
+          To-Do App
+        </h1>
+        <ToDoInput addTask={addTask} />
+        <ToDoList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} />
+      </div>
     </div>
   );
 };
