@@ -29,7 +29,7 @@ const ToDoItem = ({ task, updateTask, deleteTask }) => {
         )}
         <div className="flex space-x-2">
             <button
-            onClick={() => setIsEditing(!isEditing)}
+            onClick={isEditing ? handleUpdate : () => setIsEditing(true)}
             className="bg-yellow-400 hover:bg-yellow-500 text-white px-2 py-1 rounded-md"
             >
             {isEditing ? 'Speichern' : 'Bearbeiten'}
