@@ -6,6 +6,8 @@ import './index.css';
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
+  const openTasks = tasks.filter((task) => !task.completed);
+  const completedTasks = tasks.filter((task) => task.completed);
 
   useEffect(() => {
     fetchTasks();
@@ -47,6 +49,19 @@ const App = () => {
     }
   };
 
+  const toggleTaskStatus = async (id) => {
+    try {
+      const task = tasks.find((task) => task.id === id);
+      const updatedTask = { ...task, completed: !task.completed };
+      await axios.put(`http://localhost:2000/data/${id}`, updatedTask);
+      setTasks((prevTasks) =>
+        prevTasks.map((t) => (t.id === id ? updatedTask : t))
+      );
+    } catch (error) {
+      console.error('Fehler beim Umschalten des Status:', error);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-blue-200 flex items-center justify-center">
       <div className="bg-white shadow-2xl rounded-lg p-8 w-full max-w-4xl">
@@ -54,10 +69,23 @@ const App = () => {
           To-Do App
         </h1>
         <ToDoInput addTask={addTask} />
-        <ToDoList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} />
+        <div>
+          <h2 className="text-xl font-bold mb-4">Offene Aufgaben</h2>
+          <ToDoList
+            tasks={openTasks}
+            toggleTaskStatus={toggleTaskStatus}
+            deleteTask={deleteTask}
+          />
+
+          <h2 className="text-xl font-bold mt-8 mb-4">Erledigte Aufgaben</h2>
+          <ToDoList
+            tasks={completedTasks}
+            toggleTaskStatus={toggleTaskStatus}
+            deleteTask={deleteTask}
+          />
+        </div>
       </div>
     </div>
-    
   );
 };
 

@@ -33,7 +33,7 @@ app.get('/data', (req, res) => {
 // POST /data: Fügt einen neuen Eintrag hinzu
 app.post('/data', (req, res) => {
   const data = loadData();
-  const newEntry = { id: Date.now().toString(), ...req.body };
+  const newEntry = { id: Date.now().toString(), ...req.body, completed: false };
   data.push(newEntry);
   saveData(data);
   res.status(201).json(newEntry);
