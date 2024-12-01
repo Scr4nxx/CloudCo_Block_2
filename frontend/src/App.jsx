@@ -9,6 +9,7 @@ const App = () => {
   const openTasks = tasks.filter((task) => !task.completed);
   const completedTasks = tasks.filter((task) => task.completed);
 
+  //beim ersten Laden der App die Aufgaben vom Server abrufen
   useEffect(() => {
     fetchTasks();
   }, []);

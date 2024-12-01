@@ -15,7 +15,7 @@ const ToDoItem = ({ task, toggleTaskStatus, deleteTask, updateTask }) => {
   };
 
   return (
-    <div className="flex items-center justify-between bg-gray-50 bg-[#404668] text-[#ffffff] p-4 rounded-md shadow-sm mb-2">
+    <div className="flex items-center justify-between bg-[#404668] text-[#ffffff] p-4 rounded-md shadow-sm mb-2">
       <div className="flex items-center">
         {/* Status-Icon für Aufgabenstatus */}
         <button

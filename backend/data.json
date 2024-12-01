@@ -1,17 +1,12 @@
 [
   {
-    "id": "1732877599268",
-    "name": "as",
-    "completed": true
-  },
-  {
-    "id": "1732879202347",
-    "name": "asd",
-    "completed": true
-  },
-  {
-    "id": "1732880671501",
-    "name": "asd",
+    "id": "1732888688529",
+    "name": "lernen + hausaufgaben",
     "completed": false
+  },
+  {
+    "id": "1732888838822",
+    "name": "bbbbb",
+    "completed": true
   }
 ]
